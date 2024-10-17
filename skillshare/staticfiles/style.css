@@ -1,0 +1,156 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #000000; 
+    color: #FFFFFF; 
+}
+
+header {
+    background-color: #28a745; 
+    color: #fff;
+    padding: 5px 0; 
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    padding: 5px 0; 
+    font-size: 2em;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0; 
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 10px; 
+}
+
+nav ul li a {
+    color: #fff; 
+    text-decoration: none;
+    font-size: 0.9em;
+    padding: 5px; 
+}
+
+nav ul li a:hover {
+    text-decoration:solid;
+}
+
+h2 {
+    color: #28a745; 
+    text-align: center;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #28a745; 
+    border-radius: 4px;
+}
+
+ul li strong {
+    color: #FFFFFF; 
+    font-weight: bold; 
+}
+
+ul li em, ul li span {
+    color: #CCCCCC;
+}
+
+button {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+form {
+    margin-bottom: 20px;
+}
+
+input, select {
+    background-color: #333333; 
+    color: #FFFFFF; 
+    border: 1px solid #28a745; 
+    padding: 8px;
+    border-radius: 4px;
+}
+
+input::placeholder {
+    color: #AAAAAA; 
+}
+.filter-form-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.filter-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.filter-form label, .filter-form select, .filter-form button {
+    margin-bottom: 10px;
+}
+textarea {
+    background-color: #333333;
+    color: #FFFFFF;
+    border: 1px solid #28a745;
+    padding: 8px;
+    border-radius: 4px;
+}
+
+
+a {
+    color: #28a745; 
+}
+
+a:hover {
+    color: #218838; 
+}
+
+select {
+    background-color: #000000;
+    color: #FFFFFF;
+    border: 1px solid #28a745;
+    padding: 5px;
+}
+
+.profile-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    margin: 20px 0;
+    margin-left: auto;
+}
+
+.profile-page form {
+    width: 300px;
+    text-align: center;
+}
+
+.profile-page h2, .profile-page h3 {
+    text-align: center;
+    color: #28a745;
+}
+
+.profile-page form input, .profile-page form button {
+    width: 100%;
+    margin-bottom: 10px;
+}

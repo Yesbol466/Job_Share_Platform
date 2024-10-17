@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="filter-form-container">
+    <form method="GET" action="" class="filter-form">
+        <label for="category">Filter by Category:</label>
+        <select name="category" id="category">
+            <option value="">All</option>
+            <option value="Programming" {% if category_filter == "Programming" %}selected{% endif %}>Programming</option>
+            <option value="Program Management" {% if category_filter == "Program Management" %}selected{% endif %}>Program Management</option>
+            <option value="Real Estate & Workplace Services" {% if category_filter == "Real Estate & Workplace Services" %}selected{% endif %}>Real Estate & Workplace Services</option>
+            <option value="People Operations" {% if category_filter == "People Operations" %}selected{% endif %}>People Operations</option>
+            <option value="User Experience & Design" {% if category_filter == "User Experience & Design" %}selected{% endif %}>User Experience & Design</option>
+            <option value="Administrative" {% if category_filter == "Administrative" %}selected{% endif %}>Administrative</option>
+            <option value="Legal & Government Relations" {% if category_filter == "Legal & Government Relations" %}selected{% endif %}>Legal & Government Relations</option>
+            <option value="Finance" {% if category_filter == "Finance" %}selected{% endif %}>Finance</option>
+            <option value="Sales Operations" {% if category_filter == "Sales Operations" %}selected{% endif %}>Sales Operations</option>
+            <option value="Sales & Account Management" {% if category_filter == "Sales & Account Management" %}selected{% endif %}>Sales & Account Management</option>
+            <option value="Network Engineering" {% if category_filter == "Network Engineering" %}selected{% endif %}>Network Engineering</option>
+            <option value="Marketing & Communications" {% if category_filter == "Marketing & Communications" %}selected{% endif %}>Marketing & Communications</option>
+            <option value="IT & Data Management" {% if category_filter == "IT & Data Management" %}selected{% endif %}>IT & Data Management</option>
+            <option value="Technical Infrastructure" {% if category_filter == "Technical Infrastructure" %}selected{% endif %}>Technical Infrastructure</option>
+            <option value="Technical Writing" {% if category_filter == "Technical Writing" %}selected{% endif %}>Technical Writing</option>
+            <option value="Business Strategy" {% if category_filter == "Business Strategy" %}selected{% endif %}>Business Strategy</option>
+            <option value="Data Center & Network" {% if category_filter == "Data Center & Network" %}selected{% endif %}>Data Center & Network</option>
+            <option value="Software Engineering" {% if category_filter == "Software Engineering" %}selected{% endif %}>Software Engineering</option>
+            <option value="Product & Customer Support" {% if category_filter == "Product & Customer Support" %}selected{% endif %}>Product & Customer Support</option>
+            <option value="Partnerships" {% if category_filter == "Partnerships" %}selected{% endif %}>Partnerships</option>
+            <option value="Hardware Engineering" {% if category_filter == "Hardware Engineering" %}selected{% endif %}>Hardware Engineering</option>
+            <option value="Developer Relations" {% if category_filter == "Developer Relations" %}selected{% endif %}>Developer Relations</option>
+            <option value="Technical Solutions" {% if category_filter == "Technical Solutions" %}selected{% endif %}>Technical Solutions</option>
+            <option value="Manufacturing & Supply Chain" {% if category_filter == "Manufacturing & Supply Chain" %}selected{% endif %}>Manufacturing & Supply Chain</option>
+            <option value="Other" {% if category_filter == "Other" %}selected{% endif %}>Other</option>
+        </select>
+        <button type="submit">Apply</button>
+    </form>
+</div>
+
+<h2>Available Jobs</h2>
+<ul id="jobs-list">
+    {% for job in jobs %}
+        <li>
+            <strong>{{ job.title }}</strong> at <em>{{ job.company }}</em> <br>
+            <strong>Category:</strong> <span>{{ job.category }}</span> <br>
+            <strong>Location:</strong> <span>{{ job.location }}</span> <br>
+            <strong>Responsibilities:</strong> <span>{{ job.responsibility }}</span> <br>
+            <strong>Minimum Qualifications:</strong> <span>{{ job.minimum_qualifications }}</span> <br>
+            <strong>Preferred Qualifications:</strong> <span>{{ job.preferred_qualifications }}</span> <br>
+            <a href="{% url 'save_job' job.id %}">Save Job</a>
+        </li>
+    {% endfor %}
+</ul>
+{% endblock %}
