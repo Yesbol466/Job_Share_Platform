@@ -66,16 +66,16 @@ python manage.py test
 
 ## Screenshots
 1. **Job Listings Page:** The user can filter job listings by category and save jobs that interest them.
-   ![Job Listings Page]()
+   ![Job Listings Page](https://github.com/Yesbol466/Job_Share_Platform/blob/master/skillshare/job_page_screenshot.png)
 
 2. **Profile Page:** Users can view their saved jobs and update their personal information.
-   ![Profile Page]()
+   ![Profile Page](https://github.com/Yesbol466/Job_Share_Platform/blob/master/skillshare/profile%20screenshot.png)
 
 3. **Registration Page:** Users need to first create their account using correct password formatting and credentials.
-   ![Registration Page]()
+   ![Registration Page](https://github.com/Yesbol466/Job_Share_Platform/blob/master/skillshare/register%20screenshot.png)
 
 4. **Login Page:** Users can log in after creating their account and update the account and view saved jobs.
-   ![Login Page]()
+   ![Login Page](https://github.com/Yesbol466/Job_Share_Platform/blob/master/skillshare/login%20screenshot.png)
 
 ## Conclusion
 The Early Pass project fulfills most of the required functionalities, including user management, job research, and saving capabilities. While role-based permissions have not been implemented yet, the core features work as expected, and the application has successfully passed unit testing.
